@@ -15,7 +15,15 @@
 		DAFFF8F21F163E0400AF6771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8F11F163E0400AF6771 /* Assets.xcassets */; };
 		DAFFF8F51F163E0400AF6771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8F31F163E0400AF6771 /* LaunchScreen.storyboard */; };
 		DAFFF8FF1F16449000AF6771 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8FE1F16449000AF6771 /* logo.png */; };
-		DAFFF9021F168F4F00AF6771 /* DarabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9011F168F4F00AF6771 /* DarabaseController.swift */; };
+		DAFFF9021F168F4F00AF6771 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9011F168F4F00AF6771 /* DatabaseController.swift */; };
+		DAFFF90B1F1693E300AF6771 /* Comment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9031F1693E300AF6771 /* Comment+CoreDataClass.swift */; };
+		DAFFF90C1F1693E300AF6771 /* Comment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9041F1693E300AF6771 /* Comment+CoreDataProperties.swift */; };
+		DAFFF90D1F1693E300AF6771 /* Club+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9051F1693E300AF6771 /* Club+CoreDataClass.swift */; };
+		DAFFF90E1F1693E300AF6771 /* Club+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9061F1693E300AF6771 /* Club+CoreDataProperties.swift */; };
+		DAFFF90F1F1693E300AF6771 /* Game+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9071F1693E300AF6771 /* Game+CoreDataClass.swift */; };
+		DAFFF9101F1693E300AF6771 /* Game+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9081F1693E300AF6771 /* Game+CoreDataProperties.swift */; };
+		DAFFF9111F1693E300AF6771 /* Player+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9091F1693E300AF6771 /* Player+CoreDataClass.swift */; };
+		DAFFF9121F1693E300AF6771 /* Player+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF90A1F1693E300AF6771 /* Player+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +38,15 @@
 		DAFFF8F41F163E0400AF6771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAFFF8F61F163E0400AF6771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFFF8FE1F16449000AF6771 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		DAFFF9011F168F4F00AF6771 /* DarabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarabaseController.swift; sourceTree = "<group>"; };
+		DAFFF9011F168F4F00AF6771 /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		DAFFF9031F1693E300AF6771 /* Comment+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DAFFF9041F1693E300AF6771 /* Comment+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DAFFF9051F1693E300AF6771 /* Club+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DAFFF9061F1693E300AF6771 /* Club+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Club+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DAFFF9071F1693E300AF6771 /* Game+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DAFFF9081F1693E300AF6771 /* Game+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DAFFF9091F1693E300AF6771 /* Player+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DAFFF90A1F1693E300AF6771 /* Player+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DD694CE643160B9CE9140F59 /* Pods-fights.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fights.release.xcconfig"; path = "Pods/Target Support Files/Pods-fights/Pods-fights.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +100,9 @@
 		DAFFF8E61F163E0400AF6771 /* fights */ = {
 			isa = PBXGroup;
 			children = (
+				DAFFF9131F1693EB00AF6771 /* models */,
 				DAFFF8E71F163E0400AF6771 /* AppDelegate.swift */,
-				DAFFF9011F168F4F00AF6771 /* DarabaseController.swift */,
+				DAFFF9011F168F4F00AF6771 /* DatabaseController.swift */,
 				DAFFF8E91F163E0400AF6771 /* ViewController.swift */,
 				DAFFF8EB1F163E0400AF6771 /* Main.storyboard */,
 				DAFFF8F11F163E0400AF6771 /* Assets.xcassets */,
@@ -103,6 +120,21 @@
 				DAFFF8FE1F16449000AF6771 /* logo.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		DAFFF9131F1693EB00AF6771 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				DAFFF9031F1693E300AF6771 /* Comment+CoreDataClass.swift */,
+				DAFFF9041F1693E300AF6771 /* Comment+CoreDataProperties.swift */,
+				DAFFF9051F1693E300AF6771 /* Club+CoreDataClass.swift */,
+				DAFFF9061F1693E300AF6771 /* Club+CoreDataProperties.swift */,
+				DAFFF9071F1693E300AF6771 /* Game+CoreDataClass.swift */,
+				DAFFF9081F1693E300AF6771 /* Game+CoreDataProperties.swift */,
+				DAFFF9091F1693E300AF6771 /* Player+CoreDataClass.swift */,
+				DAFFF90A1F1693E300AF6771 /* Player+CoreDataProperties.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +264,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFFF8EA1F163E0400AF6771 /* ViewController.swift in Sources */,
+				DAFFF90E1F1693E300AF6771 /* Club+CoreDataProperties.swift in Sources */,
+				DAFFF9121F1693E300AF6771 /* Player+CoreDataProperties.swift in Sources */,
 				DAFFF8F01F163E0400AF6771 /* fights.xcdatamodeld in Sources */,
-				DAFFF9021F168F4F00AF6771 /* DarabaseController.swift in Sources */,
+				DAFFF9111F1693E300AF6771 /* Player+CoreDataClass.swift in Sources */,
+				DAFFF9021F168F4F00AF6771 /* DatabaseController.swift in Sources */,
 				DAFFF8E81F163E0400AF6771 /* AppDelegate.swift in Sources */,
+				DAFFF90C1F1693E300AF6771 /* Comment+CoreDataProperties.swift in Sources */,
+				DAFFF90D1F1693E300AF6771 /* Club+CoreDataClass.swift in Sources */,
+				DAFFF90B1F1693E300AF6771 /* Comment+CoreDataClass.swift in Sources */,
+				DAFFF90F1F1693E300AF6771 /* Game+CoreDataClass.swift in Sources */,
+				DAFFF9101F1693E300AF6771 /* Game+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
                     if(json["error"] as? Int ?? 100  == 0)
                     {
                         UserDefaults.standard.setValue(json["id"], forKey: "id")
+                        
                     }
                 }
             }
