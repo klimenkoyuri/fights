@@ -15,6 +15,7 @@
 		DAFFF8F21F163E0400AF6771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8F11F163E0400AF6771 /* Assets.xcassets */; };
 		DAFFF8F51F163E0400AF6771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8F31F163E0400AF6771 /* LaunchScreen.storyboard */; };
 		DAFFF8FF1F16449000AF6771 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8FE1F16449000AF6771 /* logo.png */; };
+		DAFFF9021F168F4F00AF6771 /* DarabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF9011F168F4F00AF6771 /* DarabaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		DAFFF8F41F163E0400AF6771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAFFF8F61F163E0400AF6771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFFF8FE1F16449000AF6771 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DAFFF9011F168F4F00AF6771 /* DarabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarabaseController.swift; sourceTree = "<group>"; };
 		DD694CE643160B9CE9140F59 /* Pods-fights.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fights.release.xcconfig"; path = "Pods/Target Support Files/Pods-fights/Pods-fights.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFFF8E71F163E0400AF6771 /* AppDelegate.swift */,
+				DAFFF9011F168F4F00AF6771 /* DarabaseController.swift */,
 				DAFFF8E91F163E0400AF6771 /* ViewController.swift */,
 				DAFFF8EB1F163E0400AF6771 /* Main.storyboard */,
 				DAFFF8F11F163E0400AF6771 /* Assets.xcassets */,
@@ -230,6 +233,7 @@
 			files = (
 				DAFFF8EA1F163E0400AF6771 /* ViewController.swift in Sources */,
 				DAFFF8F01F163E0400AF6771 /* fights.xcdatamodeld in Sources */,
+				DAFFF9021F168F4F00AF6771 /* DarabaseController.swift in Sources */,
 				DAFFF8E81F163E0400AF6771 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
