@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Fights.xcscheme</key>
+		<key>fights.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DA90FF121F163AB000F1493F</key>
+		<key>DAFFF8E31F163E0400AF6771</key>
 		<dict>
 			<key>primary</key>
 			<true/>

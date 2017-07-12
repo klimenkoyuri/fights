@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA90FF171F163AB000F1493F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90FF161F163AB000F1493F /* AppDelegate.swift */; };
-		DA90FF191F163AB000F1493F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90FF181F163AB000F1493F /* ViewController.swift */; };
-		DA90FF1C1F163AB000F1493F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA90FF1A1F163AB000F1493F /* Main.storyboard */; };
-		DA90FF1F1F163AB000F1493F /* Fights.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA90FF1D1F163AB000F1493F /* Fights.xcdatamodeld */; };
-		DA90FF211F163AB000F1493F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA90FF201F163AB000F1493F /* Assets.xcassets */; };
-		DA90FF241F163AB000F1493F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA90FF221F163AB000F1493F /* LaunchScreen.storyboard */; };
+		DAFFF8E81F163E0400AF6771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF8E71F163E0400AF6771 /* AppDelegate.swift */; };
+		DAFFF8EA1F163E0400AF6771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF8E91F163E0400AF6771 /* ViewController.swift */; };
+		DAFFF8ED1F163E0400AF6771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8EB1F163E0400AF6771 /* Main.storyboard */; };
+		DAFFF8F01F163E0400AF6771 /* fights.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF8EE1F163E0400AF6771 /* fights.xcdatamodeld */; };
+		DAFFF8F21F163E0400AF6771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8F11F163E0400AF6771 /* Assets.xcassets */; };
+		DAFFF8F51F163E0400AF6771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8F31F163E0400AF6771 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DA90FF131F163AB000F1493F /* Fights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fights.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA90FF161F163AB000F1493F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA90FF181F163AB000F1493F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA90FF1B1F163AB000F1493F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DA90FF1E1F163AB000F1493F /* Fights.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fights.xcdatamodel; sourceTree = "<group>"; };
-		DA90FF201F163AB000F1493F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DA90FF231F163AB000F1493F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DA90FF251F163AB000F1493F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAFFF8E41F163E0400AF6771 /* fights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fights.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFFF8E71F163E0400AF6771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAFFF8E91F163E0400AF6771 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAFFF8EC1F163E0400AF6771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAFFF8EF1F163E0400AF6771 /* fights.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fights.xcdatamodel; sourceTree = "<group>"; };
+		DAFFF8F11F163E0400AF6771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAFFF8F41F163E0400AF6771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAFFF8F61F163E0400AF6771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DA90FF101F163AB000F1493F /* Frameworks */ = {
+		DAFFF8E11F163E0400AF6771 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,74 +37,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DA90FF0A1F163AB000F1493F = {
+		DAFFF8DB1F163E0400AF6771 = {
 			isa = PBXGroup;
 			children = (
-				DA90FF151F163AB000F1493F /* Fights */,
-				DA90FF141F163AB000F1493F /* Products */,
+				DAFFF8E61F163E0400AF6771 /* fights */,
+				DAFFF8E51F163E0400AF6771 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DA90FF141F163AB000F1493F /* Products */ = {
+		DAFFF8E51F163E0400AF6771 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA90FF131F163AB000F1493F /* Fights.app */,
+				DAFFF8E41F163E0400AF6771 /* fights.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DA90FF151F163AB000F1493F /* Fights */ = {
+		DAFFF8E61F163E0400AF6771 /* fights */ = {
 			isa = PBXGroup;
 			children = (
-				DA90FF161F163AB000F1493F /* AppDelegate.swift */,
-				DA90FF181F163AB000F1493F /* ViewController.swift */,
-				DA90FF1A1F163AB000F1493F /* Main.storyboard */,
-				DA90FF201F163AB000F1493F /* Assets.xcassets */,
-				DA90FF221F163AB000F1493F /* LaunchScreen.storyboard */,
-				DA90FF251F163AB000F1493F /* Info.plist */,
-				DA90FF1D1F163AB000F1493F /* Fights.xcdatamodeld */,
+				DAFFF8E71F163E0400AF6771 /* AppDelegate.swift */,
+				DAFFF8E91F163E0400AF6771 /* ViewController.swift */,
+				DAFFF8EB1F163E0400AF6771 /* Main.storyboard */,
+				DAFFF8F11F163E0400AF6771 /* Assets.xcassets */,
+				DAFFF8F31F163E0400AF6771 /* LaunchScreen.storyboard */,
+				DAFFF8F61F163E0400AF6771 /* Info.plist */,
+				DAFFF8EE1F163E0400AF6771 /* fights.xcdatamodeld */,
 			);
-			path = Fights;
+			path = fights;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA90FF121F163AB000F1493F /* Fights */ = {
+		DAFFF8E31F163E0400AF6771 /* fights */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA90FF281F163AB000F1493F /* Build configuration list for PBXNativeTarget "Fights" */;
+			buildConfigurationList = DAFFF8F91F163E0400AF6771 /* Build configuration list for PBXNativeTarget "fights" */;
 			buildPhases = (
-				DA90FF0F1F163AB000F1493F /* Sources */,
-				DA90FF101F163AB000F1493F /* Frameworks */,
-				DA90FF111F163AB000F1493F /* Resources */,
+				DAFFF8E01F163E0400AF6771 /* Sources */,
+				DAFFF8E11F163E0400AF6771 /* Frameworks */,
+				DAFFF8E21F163E0400AF6771 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Fights;
-			productName = Fights;
-			productReference = DA90FF131F163AB000F1493F /* Fights.app */;
+			name = fights;
+			productName = fights;
+			productReference = DAFFF8E41F163E0400AF6771 /* fights.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DA90FF0B1F163AB000F1493F /* Project object */ = {
+		DAFFF8DC1F163E0400AF6771 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Styleru;
 				TargetAttributes = {
-					DA90FF121F163AB000F1493F = {
+					DAFFF8E31F163E0400AF6771 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4RWLL37A47;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = DA90FF0E1F163AB000F1493F /* Build configuration list for PBXProject "Fights" */;
+			buildConfigurationList = DAFFF8DF1F163E0400AF6771 /* Build configuration list for PBXProject "fights" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,55 +112,55 @@
 				en,
 				Base,
 			);
-			mainGroup = DA90FF0A1F163AB000F1493F;
-			productRefGroup = DA90FF141F163AB000F1493F /* Products */;
+			mainGroup = DAFFF8DB1F163E0400AF6771;
+			productRefGroup = DAFFF8E51F163E0400AF6771 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA90FF121F163AB000F1493F /* Fights */,
+				DAFFF8E31F163E0400AF6771 /* fights */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DA90FF111F163AB000F1493F /* Resources */ = {
+		DAFFF8E21F163E0400AF6771 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA90FF241F163AB000F1493F /* LaunchScreen.storyboard in Resources */,
-				DA90FF211F163AB000F1493F /* Assets.xcassets in Resources */,
-				DA90FF1C1F163AB000F1493F /* Main.storyboard in Resources */,
+				DAFFF8F51F163E0400AF6771 /* LaunchScreen.storyboard in Resources */,
+				DAFFF8F21F163E0400AF6771 /* Assets.xcassets in Resources */,
+				DAFFF8ED1F163E0400AF6771 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DA90FF0F1F163AB000F1493F /* Sources */ = {
+		DAFFF8E01F163E0400AF6771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA90FF191F163AB000F1493F /* ViewController.swift in Sources */,
-				DA90FF171F163AB000F1493F /* AppDelegate.swift in Sources */,
-				DA90FF1F1F163AB000F1493F /* Fights.xcdatamodeld in Sources */,
+				DAFFF8EA1F163E0400AF6771 /* ViewController.swift in Sources */,
+				DAFFF8F01F163E0400AF6771 /* fights.xcdatamodeld in Sources */,
+				DAFFF8E81F163E0400AF6771 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA90FF1A1F163AB000F1493F /* Main.storyboard */ = {
+		DAFFF8EB1F163E0400AF6771 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DA90FF1B1F163AB000F1493F /* Base */,
+				DAFFF8EC1F163E0400AF6771 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DA90FF221F163AB000F1493F /* LaunchScreen.storyboard */ = {
+		DAFFF8F31F163E0400AF6771 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DA90FF231F163AB000F1493F /* Base */,
+				DAFFF8F41F163E0400AF6771 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DA90FF261F163AB000F1493F /* Debug */ = {
+		DAFFF8F71F163E0400AF6771 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -218,7 +218,7 @@
 			};
 			name = Debug;
 		};
-		DA90FF271F163AB000F1493F /* Release */ = {
+		DAFFF8F81F163E0400AF6771 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,27 +261,27 @@
 			};
 			name = Release;
 		};
-		DA90FF291F163AB000F1493F /* Debug */ = {
+		DAFFF8FA1F163E0400AF6771 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4RWLL37A47;
-				INFOPLIST_FILE = Fights/Info.plist;
+				INFOPLIST_FILE = fights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Styleru.Fights;
+				PRODUCT_BUNDLE_IDENTIFIER = Styleru.fights;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		DA90FF2A1F163AB000F1493F /* Release */ = {
+		DAFFF8FB1F163E0400AF6771 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4RWLL37A47;
-				INFOPLIST_FILE = Fights/Info.plist;
+				INFOPLIST_FILE = fights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Styleru.Fights;
+				PRODUCT_BUNDLE_IDENTIFIER = Styleru.fights;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -290,37 +290,37 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA90FF0E1F163AB000F1493F /* Build configuration list for PBXProject "Fights" */ = {
+		DAFFF8DF1F163E0400AF6771 /* Build configuration list for PBXProject "fights" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA90FF261F163AB000F1493F /* Debug */,
-				DA90FF271F163AB000F1493F /* Release */,
+				DAFFF8F71F163E0400AF6771 /* Debug */,
+				DAFFF8F81F163E0400AF6771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA90FF281F163AB000F1493F /* Build configuration list for PBXNativeTarget "Fights" */ = {
+		DAFFF8F91F163E0400AF6771 /* Build configuration list for PBXNativeTarget "fights" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA90FF291F163AB000F1493F /* Debug */,
-				DA90FF2A1F163AB000F1493F /* Release */,
+				DAFFF8FA1F163E0400AF6771 /* Debug */,
+				DAFFF8FB1F163E0400AF6771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DA90FF1D1F163AB000F1493F /* Fights.xcdatamodeld */ = {
+		DAFFF8EE1F163E0400AF6771 /* fights.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DA90FF1E1F163AB000F1493F /* Fights.xcdatamodel */,
+				DAFFF8EF1F163E0400AF6771 /* fights.xcdatamodel */,
 			);
-			currentVersion = DA90FF1E1F163AB000F1493F /* Fights.xcdatamodel */;
-			path = Fights.xcdatamodeld;
+			currentVersion = DAFFF8EF1F163E0400AF6771 /* fights.xcdatamodel */;
+			path = fights.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = DA90FF0B1F163AB000F1493F /* Project object */;
+	rootObject = DAFFF8DC1F163E0400AF6771 /* Project object */;
 }
