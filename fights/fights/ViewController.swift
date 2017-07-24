@@ -16,18 +16,50 @@ class ViewController: UIViewController {
     @IBOutlet var pass: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         if (UserDefaults.standard.value(forKey: "token") != nil)
             {
-            let token = UserDefaults.standard.value(forKey: "token") as! String
-            Alamofire.request("https://makub.ru/api/checktoken", method: .post, parameters: ["token": token]).responseJSON { response in
-                if let json = response.result.value as? [String:Any] {
-                    if(json["error"] as? Int ?? 100  == 0)
-                    {
-                        UserDefaults.standard.setValue(json["id"], forKey: "id")
+            DispatchQueue.main.async
+            {
+                let token = UserDefaults.standard.value(forKey: "token") as! String
+                Alamofire.request("https://makub.ru/api/checktoken", method: .post, parameters: ["token": token]).responseJSON { response in
+                    if let json = response.result.value as? [String:Any] {
+                        if(json["error"] as? Int ?? 100  == 0)
+                        {
+                            
+                            let fetchRequest:NSFetchRequest<Player> = Player.fetchRequest()
+                            fetchRequest.predicate = NSPredicate(format: "id = %d", Int16((json["id"] as! NSString).intValue))
+                            
+                            do{
+                                let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+                                for result in searchResults as [Player]{
+                                    DatabaseController.getContext().delete(result)
+                                }
+                                
+                            }
+                            catch
+                            {
+                                
+                            }
                         
+                        let player: Player =  NSEntityDescription.insertNewObject(forEntityName: "Player",into: DatabaseController.getContext()) as! Player
+                        player.name = json["name"] as? String;
+                        player.surname = json["surname"] as? String
+                        player.id = Int16((json["id"] as! NSString).intValue)
+                        player.club_id = Int16((json["club_id"] as! NSString).intValue)
+                        player.rating = Int16((json["rating_of_player"] as! NSString).intValue)
+                        
+                        UserDefaults.standard.setValue(Int16((json["id"] as! NSString).intValue), forKey: "id")
+                            DatabaseController.saveContext()
+                         self.performSegue(withIdentifier: "login", sender: nil)
+                        }
                     }
                 }
+                
+                
             }
+
 
         }
         // Do any additional setup after loading the view, typically from a nib.
@@ -58,9 +90,38 @@ class ViewController: UIViewController {
                         let token = json["token"]!
                         UserDefaults.standard.setValue(token, forKey: "token")
                         //получить данные в кордату и пойти на след экран
-                        
-                        DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "login", sender: nil)
+                        Alamofire.request("https://makub.ru/api/checktoken", method: .post, parameters: ["token": token]).responseJSON { response in
+                            if let json2 = response.result.value as? [String:Any] {
+                                if(json2["error"] as? Int ?? 100  == 0)
+                                {
+                                    
+                                    let fetchRequest:NSFetchRequest<Player> = Player.fetchRequest()
+                                    fetchRequest.predicate = NSPredicate(format: "id = %d", Int16((json2["id"] as! NSString).intValue))
+                                    
+                                    do{
+                                        let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+                                        for result in searchResults as [Player]{
+                                            DatabaseController.getContext().delete(result)
+                                        }
+                                        
+                                    }
+                                    catch
+                                    {
+                                        
+                                    }
+                                    
+                                    let player: Player =  NSEntityDescription.insertNewObject(forEntityName: "Player",into: DatabaseController.getContext()) as! Player
+                                    player.name = json2["name"] as? String;
+                                    player.surname = json2["surname"] as? String
+                                    player.id = Int16((json2["id"] as! NSString).intValue)
+                                    player.club_id = Int16((json2["club_id"] as! NSString).intValue)
+                                    player.rating = Int16((json2["rating_of_player"] as! NSString).intValue)
+                                    
+                                    UserDefaults.standard.setValue(Int16((json2["id"] as! NSString).intValue), forKey: "id")
+                                    DatabaseController.saveContext()
+                                    self.performSegue(withIdentifier: "login", sender: nil)
+                                }
+                            }
                         }
                         
                     }

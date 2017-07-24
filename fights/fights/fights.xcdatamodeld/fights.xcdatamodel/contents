@@ -20,6 +20,11 @@
         <relationship name="comment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="game" inverseEntity="Comment" syncable="YES"/>
         <relationship name="player" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Player" inverseName="game" inverseEntity="Player" syncable="YES"/>
     </entity>
+    <entity name="Mygame" representedClassName="Mygame" syncable="YES">
+        <attribute name="hisscore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="myscore" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="player2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="Player" representedClassName="Player" syncable="YES">
         <attribute name="club_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -31,9 +36,10 @@
         <relationship name="game" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="player" inverseEntity="Game" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Player" positionX="-398" positionY="-198" width="128" height="163"/>
         <element name="Club" positionX="-396" positionY="20" width="128" height="88"/>
-        <element name="Game" positionX="-11" positionY="-169" width="128" height="133"/>
         <element name="Comment" positionX="-200" positionY="-199" width="128" height="118"/>
+        <element name="Game" positionX="-11" positionY="-169" width="128" height="133"/>
+        <element name="Mygame" positionX="-207" positionY="-72" width="128" height="88"/>
+        <element name="Player" positionX="-398" positionY="-198" width="128" height="163"/>
     </elements>
 </model>
