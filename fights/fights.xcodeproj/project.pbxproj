@@ -13,6 +13,9 @@
 		DA5599471F24F9D300139833 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5599461F24F9D300139833 /* GameDetail.swift */; };
 		DA5599491F2694F200139833 /* AddComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5599481F2694F200139833 /* AddComment.swift */; };
 		DA55994B1F269DFD00139833 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55994A1F269DFD00139833 /* CommentTableViewCell.swift */; };
+		DA55994D1F273F6E00139833 /* AllGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55994C1F273F6E00139833 /* AllGames.swift */; };
+		DA7B1D9C1F274BEA009ED9CF /* EditLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B1D9B1F274BEA009ED9CF /* EditLogin.swift */; };
+		DA7B1DA11F274C52009ED9CF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B1DA01F274C52009ED9CF /* Profile.swift */; };
 		DAFFF8E81F163E0400AF6771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF8E71F163E0400AF6771 /* AppDelegate.swift */; };
 		DAFFF8EA1F163E0400AF6771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFFF8E91F163E0400AF6771 /* ViewController.swift */; };
 		DAFFF8ED1F163E0400AF6771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFFF8EB1F163E0400AF6771 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 		DA5599461F24F9D300139833 /* GameDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		DA5599481F2694F200139833 /* AddComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddComment.swift; sourceTree = "<group>"; };
 		DA55994A1F269DFD00139833 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		DA55994C1F273F6E00139833 /* AllGames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllGames.swift; sourceTree = "<group>"; };
+		DA7B1D9B1F274BEA009ED9CF /* EditLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLogin.swift; sourceTree = "<group>"; };
+		DA7B1DA01F274C52009ED9CF /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DAFFF8E41F163E0400AF6771 /* fights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFFF8E71F163E0400AF6771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAFFF8E91F163E0400AF6771 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,9 +99,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DA7B1D9F1F274C04009ED9CF /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				DA7B1DA01F274C52009ED9CF /* Profile.swift */,
+				DA7B1D9B1F274BEA009ED9CF /* EditLogin.swift */,
+			);
+			name = profile;
+			sourceTree = "<group>";
+		};
 		DAE9D6301F239249009EC859 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				DA55994C1F273F6E00139833 /* AllGames.swift */,
 				DA5599461F24F9D300139833 /* GameDetail.swift */,
 				DAFFF91A1F16CF0200AF6771 /* GameTableViewCell.swift */,
 				DA55994A1F269DFD00139833 /* CommentTableViewCell.swift */,
@@ -128,6 +144,7 @@
 			children = (
 				DAFFF9131F1693EB00AF6771 /* models */,
 				DAFFF8E91F163E0400AF6771 /* ViewController.swift */,
+				DA7B1D9F1F274C04009ED9CF /* profile */,
 				DAE9D6301F239249009EC859 /* Games */,
 				DAFFF9011F168F4F00AF6771 /* DatabaseController.swift */,
 				DAFFF8EB1F163E0400AF6771 /* Main.storyboard */,
@@ -295,6 +312,7 @@
 				DA181D1E1F23845C0050229E /* Mygame+CoreDataClass.swift in Sources */,
 				DAFFF8EA1F163E0400AF6771 /* ViewController.swift in Sources */,
 				DAFFF90E1F1693E300AF6771 /* Club+CoreDataProperties.swift in Sources */,
+				DA55994D1F273F6E00139833 /* AllGames.swift in Sources */,
 				DAFFF9121F1693E300AF6771 /* Player+CoreDataProperties.swift in Sources */,
 				DAFFF8F01F163E0400AF6771 /* fights.xcdatamodeld in Sources */,
 				DA181D1F1F23845C0050229E /* Mygame+CoreDataProperties.swift in Sources */,
@@ -304,11 +322,13 @@
 				DA5599471F24F9D300139833 /* GameDetail.swift in Sources */,
 				DAFFF8E81F163E0400AF6771 /* AppDelegate.swift in Sources */,
 				DAFFF91B1F16CF0200AF6771 /* GameTableViewCell.swift in Sources */,
+				DA7B1D9C1F274BEA009ED9CF /* EditLogin.swift in Sources */,
 				DAFFF90C1F1693E300AF6771 /* Comment+CoreDataProperties.swift in Sources */,
 				DAFFF9191F16CEB000AF6771 /* MyGamesTableViewController.swift in Sources */,
 				DAFFF90D1F1693E300AF6771 /* Club+CoreDataClass.swift in Sources */,
 				DAFFF90B1F1693E300AF6771 /* Comment+CoreDataClass.swift in Sources */,
 				DA55994B1F269DFD00139833 /* CommentTableViewCell.swift in Sources */,
+				DA7B1DA11F274C52009ED9CF /* Profile.swift in Sources */,
 				DAFFF90F1F1693E300AF6771 /* Game+CoreDataClass.swift in Sources */,
 				DAFFF9101F1693E300AF6771 /* Game+CoreDataProperties.swift in Sources */,
 			);
@@ -437,7 +457,7 @@
 				DEVELOPMENT_TEAM = 4RWLL37A47;
 				INFOPLIST_FILE = fights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Styleru.fights;
+				PRODUCT_BUNDLE_IDENTIFIER = makub.styleru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -451,7 +471,7 @@
 				DEVELOPMENT_TEAM = 4RWLL37A47;
 				INFOPLIST_FILE = fights/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Styleru.fights;
+				PRODUCT_BUNDLE_IDENTIFIER = makub.styleru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

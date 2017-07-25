@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         
         if (UserDefaults.standard.value(forKey: "token") != nil)
             {
+                print(UserDefaults.standard.value(forKey: "token"))
             DispatchQueue.main.async
             {
                 let token = UserDefaults.standard.value(forKey: "token") as! String

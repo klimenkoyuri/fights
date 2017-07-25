@@ -43,10 +43,7 @@ class AddComment: UIViewController {
             }
 
             let token = UserDefaults.standard.value(forKey: "token") as! String
-            print(token)
-            print(self.gameId)
-            print(self.playerId)
-            print(self.comment.text)
+            
             Alamofire.request("https://makub.ru/api/add_comment", method: .post, parameters: ["token": token, "game_id": self.gameId, "comment": self.comment.text, "player_id": self.playerId])
                 .responseJSON() { response in
                     if let json = response.result.value as? [String:Any] {
