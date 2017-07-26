@@ -17,9 +17,17 @@ class AddComment: UIViewController {
     var playerId: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let myColor = UIColor.lightGray
+        self.comment.layer.borderColor = myColor.cgColor
+        self.comment.layer.borderWidth = 1.0
+       
+        
+        
         print(gameId)
         // Do any additional setup after loading the view.
         comment.placeholderText = "Оставляя комментарий помните, что нужно давать не только негатив, но и позитив"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +35,8 @@ class AddComment: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func add(_ sender: UIButton) {
+        if(self.comment.text != "")
+        {
         DispatchQueue.main.async{
             let fetchRequest:NSFetchRequest<Player> = Player.fetchRequest()
             
@@ -49,10 +59,17 @@ class AddComment: UIViewController {
                     if let json = response.result.value as? [String:Any] {
                         if(json["error"] as? Int ?? 100  == 0)
                         {
+                            UserDefaults.standard.setValue(1, forKey: "refresh")
                             _ = self.navigationController?.popViewController(animated: true)
                         }
                     }
             }
+        }
+        }
+        else{
+            let alert = UIAlertController(title: "Заполните поле комментария", message: "Или не заполняйте...", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "ОК", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         
     }

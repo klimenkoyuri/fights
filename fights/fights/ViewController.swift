@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         if (UserDefaults.standard.value(forKey: "token") != nil)
             {
-                print(UserDefaults.standard.value(forKey: "token"))
+                
             DispatchQueue.main.async
             {
                 let token = UserDefaults.standard.value(forKey: "token") as! String
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
                 
                 if let json = response.result.value as? [String:Any] {
                     
-                    if(json["error"] as! Int == 0)
+                    if(json["error"] as? Int ?? 100 == 0)
                     {
                         
                         let token = json["token"]!
@@ -125,6 +125,21 @@ class ViewController: UIViewController {
                             }
                         }
                         
+                    }
+                    else
+                    {
+                        if json["error"] as? Int ?? 100 != 100
+                        {
+                        let alert = UIAlertController(title: "Проверьте заполнение полей", message: "Логин или пароль заполнены неверно", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Понятно", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        }
+                        else
+                        {
+                            let alert = UIAlertController(title: "Проверьте доступность сервера", message: "либо у Вас возникли проблемы с интернетом, либо отлетел сервер", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "Понятно", style: UIAlertActionStyle.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        }
                     }
                 }
             }

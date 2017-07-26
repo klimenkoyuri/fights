@@ -44,6 +44,34 @@ class GameDetail: UITableViewController {
         
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+       
+        if(UserDefaults.standard.value(forKey: "refresh")  != nil)
+        {
+            DispatchQueue.main.async{
+                UserDefaults.standard.removeObject(forKey: "refresh")
+                let token = UserDefaults.standard.value(forKey: "token") as! String
+                Alamofire.request("https://makub.ru/api/get_comments", method: .post, parameters: ["token": token, "game_id": self.gameId])
+                    .responseJSON(){ response in
+                        if let json = response.result.value as? [String:Any] {
+                            if(json["error"] as? Int ?? 100  == 0)
+                            {
+                                self.comments = (json["comments"] as! NSArray).mutableCopy() as! NSMutableArray
+                                self.flag = true
+                                self.tableView.reloadData()
+                            }
+                        }
+                }
+                
+                
+            }
+
+        }
+        else
+        {
+            
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -143,7 +171,7 @@ class GameDetail: UITableViewController {
         // Pass the selected object to the new view controller.
         if(segue.identifier == "addcomment")
         {
-            var dest = segue.destination as! AddComment
+            let dest = segue.destination as! AddComment
             dest.gameId = self.gameId
         }
     }

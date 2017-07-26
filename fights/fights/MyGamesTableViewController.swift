@@ -10,19 +10,26 @@ import UIKit
 import Alamofire
 import CoreData
 
-class MyGamesTableViewController: UITableViewController {
+class MyGamesTableViewController: UITableViewController, UISearchResultsUpdating {
     
     var games_count = 0
     var player_id: Int!
     var surname:String!
     var name: String!
-    var games: NSMutableArray!
+    var games: [NSDictionary]! = []
     var idGameToDetail: Int!
     var getData: Bool! = false
-    
+    var searchController: UISearchController!
+    var searchResults: [NSDictionary]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchController = UISearchController(searchResultsController: nil)
+        self.tableView.tableHeaderView = searchController.searchBar
+        self.searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        
         DispatchQueue.main.async{
         let token = UserDefaults.standard.value(forKey: "token") as! String
             Alamofire.request("https://makub.ru/api/my_games_count", method: .post, parameters: ["token": token])
@@ -31,8 +38,8 @@ class MyGamesTableViewController: UITableViewController {
                     if(json["error"] as? Int ?? 100  == 0)
                     {
                         self.games_count = json["count"] as! Int
-                        var to = 10
-                        if(self.games_count < 10)
+                        var to = 1000
+                        if(self.games_count < 1000)
                         {
                             to = self.games_count
                         }
@@ -41,7 +48,7 @@ class MyGamesTableViewController: UITableViewController {
                                 if let json2 = response.result.value as? [String:Any] {
                                     if(json2["error"] as? Int ?? 100  == 0)
                                     {
-                                        self.games = (json2["games"] as! NSArray).mutableCopy() as! NSMutableArray
+                                        self.games = json2["games"] as! Array
                                         self.getData = true
                                         
                                         self.tableView.reloadData()
@@ -98,12 +105,19 @@ class MyGamesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if(self.games_count == 0)
+        if searchController.isActive
         {
-            return 0
+            return self.searchResults.count
         }
-        else{
-            return self.games.count
+        else
+        {
+            if(self.games_count == 0)
+            {
+                return 0
+            }
+            else{
+                return self.games.count
+            }
         }
         
     }
@@ -112,7 +126,17 @@ class MyGamesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:GameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "game", for: indexPath) as! GameTableViewCell
         
-        let game = self.games[indexPath.row] as! NSDictionary
+        var cellArrays: [NSDictionary]
+        if searchController.isActive
+        {
+            cellArrays = searchResults
+        }
+        else
+        {
+            cellArrays = games
+        }
+        
+        let game = cellArrays[indexPath.row]
         
         cell.player1.text = self.surname + " " + self.name
         cell.score.text = String(format: "%@:%@", game.object(forKey: "our_score") as! String, game.object(forKey: "his_score") as! String )
@@ -139,10 +163,10 @@ class MyGamesTableViewController: UITableViewController {
                 DispatchQueue.main.async{
                     let from = lastElement + 1
                     var to: Int! = 0
-                    let needMore = self.games_count - self.games.count - 10
+                    let needMore = self.games_count - self.games.count - 1000
                     if(needMore > 0)
                     {
-                        to = 10
+                        to = 1000
                     }
                     else{
                         to = self.games_count - self.games.count
@@ -153,9 +177,9 @@ class MyGamesTableViewController: UITableViewController {
                             if let json = response.result.value as? [String:Any] {
                                 if(json["error"] as? Int ?? 100  == 0)
                                 {
-                                    let inserts = (json["games"] as! NSArray).mutableCopy() as! NSMutableArray
+                                    let inserts : [NSDictionary] = json["games"] as! Array
                                     for game in inserts{
-                                        self.games.add(game)
+                                        self.games.append(game)
                                     }
                                     self.tableView.reloadData()
                                     
@@ -216,6 +240,30 @@ class MyGamesTableViewController: UITableViewController {
         }
         
     }
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text
+        {
+            self.searchResults = self.games!.filter({game in
+                let sn = (game.object(forKey: "surname") as! String).range(of: searchText)
+                
+                let n = (game.object(forKey: "name") as! String).range(of: searchText)
+                return sn != nil || n != nil
+            })
+            self.tableView.reloadData()
+        }
+    }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if searchController.isActive
+        {
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
+
+    
 
 
 }
